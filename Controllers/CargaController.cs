@@ -36,11 +36,11 @@ namespace Armazenagem3L_API.Controllers {
             {
                 result = _service.listagemCargas();
             }
-            if (id > 0 && motorista == 0)
+            else if (id > 0 && motorista == 0)
             {
                 result = _service.cargaById(id);
             }
-            if (id == 0 && motorista > 0)
+            else if (id == 0 && motorista > 0)
             {
                 result = _service.cargaByMotoristaId(motorista);
             }
